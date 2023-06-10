@@ -1,0 +1,72 @@
+@import url('reset.css');
+@import url('age-calculator.css');
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-ExtraBold.ttf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-ExtraBoldItalic.ttf');
+    font-weight: 900;
+    font-style: italic;
+}
+
+:root {
+    font-size: 10px;
+    --color-1: white;
+    --color-2: #864cff;
+    --color-3: #f0f0f0;
+    --color-4: #676767;
+    --color-5: black;
+
+    --ff-1: 'Poppins';
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extrabold: 900;
+
+    --box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    --border: 1px solid lightgray;
+}
+
+body {
+    font-family: 'Poppins';
+    font-weight: 400;
+    background: var(--color-3);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+    height: 100vh;
+}

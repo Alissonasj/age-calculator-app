@@ -1,0 +1,51 @@
+.age-calculator {
+    background: var(--color-1);
+    max-width: 90vw;
+    padding: 2rem;
+    border-radius: 2rem 2rem 8rem 2rem;
+    box-shadow: var(--box-shadow);
+
+   
+}
+
+.date-birth {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: var(--border);
+    padding-bottom: 4rem;
+}
+
+label,
+input {
+    display: block;
+}
+
+.date-birth label {
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    color: var(--color-4);
+}
+
+.date-birth input {
+    width: 7rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.age-calculator button {
+    position: absolute;
+    background: var(--color-2);
+    color: var(--color-1);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    transition: all 0.3s;
+}
+
+.age-calculator button:hover {
+    background-color: var(--color-5);
+}
