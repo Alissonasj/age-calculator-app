@@ -1,11 +1,14 @@
 .age-calculator {
     background: var(--color-1);
-    max-width: 90vw;
+    min-width: clamp(30rem, 90vw, 50rem);
     padding: 2rem;
     border-radius: 2rem 2rem 8rem 2rem;
     box-shadow: var(--box-shadow);
+}
 
-   
+.age-calculator form {
+    margin-bottom: 3rem;
+    position: relative;
 }
 
 .date-birth {
@@ -28,7 +31,7 @@ input {
 }
 
 .date-birth input {
-    width: 7rem;
+    width: clamp(7rem, 15vw, 11rem);
     border: var(--border);
     border-radius: 0.5rem;
     padding: 1rem;
@@ -48,4 +51,21 @@ input {
 
 .age-calculator button:hover {
     background-color: var(--color-5);
+}
+
+.result {
+    font-size: clamp(4rem, 8vw, 6rem);
+    font-weight: var(--fw-extrabold);
+    font-style: italic;
+}
+
+.result span {
+    color: var(--color-2);
+}
+
+
+@media (min-width: 500px) {
+    .age-calculator button {
+        left: calc(100% - 2rem);
+    }
 }

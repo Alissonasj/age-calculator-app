@@ -23,7 +23,7 @@
     <body>
         <div class="container">
             <section class="age-calculator">
-                <form>
+                <form class="age-calculator__form">
                     <div class="date-birth">
                         <div>
                             <label for="day">Day</label>
@@ -31,7 +31,7 @@
                                 id="day"
                                 type="number"
                                 placeholder="DD"
-                                required
+                                
                             />
                         </div>
 
@@ -41,7 +41,7 @@
                                 id="month"
                                 type="number"
                                 placeholder="MM"
-                                required
+                                
                             />
                         </div>
 
@@ -51,18 +51,18 @@
                                 id="year"
                                 type="number"
                                 placeholder="YYYY"
-                                required
+                                
                             />
                         </div>
                     </div>
 
-                    <button type="submit">Button</button>
+                    <button class="submit" type="submit">Button</button>
                 </form>
 
                 <div class="result">
-                    <div class="result__years">Years</div>
-                    <div class="result__months">Months</div>
-                    <div class="result__days">Days</div>
+                    <div class="result__years"><span>--</span>years</div>
+                    <div class="result__months"><span>--</span>months</div>
+                    <div class="result__days"><span>--</span>days</div>
                 </div>
             </section>
 
@@ -75,5 +75,7 @@
                 >. Coded by <a href="#">Your Name Here</a>.
             </footer>
         </div>
+
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
