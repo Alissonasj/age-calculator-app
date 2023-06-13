@@ -1,41 +1,52 @@
+
+
 const input = document.getElementsByTagName('input'); //day, month, year
 const form = document.querySelector('.age-calculator__form');
 
 //Intl.DateTimeFormat()
 
-const newDate = new Date().toLocaleDateString();
-const dateCalcuated =
-    new Date() -
-    new Date('1991, 11, 03');
+const dia = 13;
+const mes = 5;
+const ano = 1994;
 
-console.log(newDate);
-console.log(dateCalcuated);
+const now = new Date();
 
-const dias = dateCalcuated / (1000 * 60 * 60 * 24)
-console.log(dias + ' dias');
+let yearsOld = now.getFullYear() - ano;
+let monthsOld = 12 - mes + now.getMonth() + 1;
+let daysOld = now.getDate() - dia;
 
-const anos = dias / 365 + ' anos'
-console.log(anos);
+if (daysOld < 0) {
+    monthsOld -= 1;
+    daysOld += 30;
+}
 
-const meses = (parseFloat(anos) - parseInt(anos))
-console.log(meses);
+if (monthsOld < 12) {
+    yearsOld -= 1;
+} else {
+    monthsOld = 0;
+}
 
+if (mes % 2 === 1 || mes === 7 || mes === 8 || mes === 9 || mes === 12) {
+    daysOld += 1;
+}
+
+console.log(`anos: ${yearsOld}, meses: ${monthsOld}, dias: ${daysOld}`);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const year = input.year.value;
-    const month = input.month.value;
-    const day = input.day.value;
+    // const year = input.year.value;
+    // const month = input.month.value;
+    // const day = input.day.value;
 
-    console.log(day, month, year);
+    // console.log(day, month, year);
 
-    let yearsOld = newDate.getFullYear() - year;
-    let monthsOld = 12 - month + newDate.getMonth() + 1;
-    let daysOld = newDate.getDate() - day;
+    // let yearsOld = now.getFullYear() - year;
+    // let monthsOld = 12 - month + now.getMonth() + 1;
+    // let daysOld = now.getDate() - day;
 
-    if (daysOld < 0) {
-        daysOld + 30;
-        monthsOld - 1;
-    }
+    // if (daysOld < 0) {
+    //     daysOld + 30;
+    //     monthsOld - 1;
+    // }
 });
